@@ -1,0 +1,33 @@
+
+
+Android Dependency Injection
+----------------------------
+reference: https://www.simplifiedcoding.net, https://medium.com
+
+The term “Dependency Injection” or in short “DI” is independent of Android. It is a design pattern in Software Engineering.
+
+DI has now become the most commonly used word among Android developers. DI stands for Dependency Injection, it’s a design pattern in which a class (dependent)
+receives the dependencies of other classes in form of an object from another piece of code instead of constructing them internally which simplifies testing and improves decoupling.
+
+Dagger-2 is a dependency injection framework. It uses code generation and is based on annotations. The generated code is easy to read and debug.
+
+It uses the following annotations :
+
+    @Module and @Provides: define classes and methods which provide dependencies.
+    @Inject: request dependencies. Can be used on a constructor, a field, or a method.
+    @Component: enable selected modules and used for performing dependency injection.
+
+Dagger-2 uses generated code to access the fields and not reflection. Therefore it is not allowed to use private fields for field injection.
+
+Popular Android Dependency Injection Frameworks
+
+To make life easier, we have some Frameworks available to implement DI.
+Dagger 2
+
+    "Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google."
+
+Square created this framework, but now Google is maintaining this framework. So I guess it is the best option to get started with Dependency Injection. At the same time, it is easy to learn, and you will find many documentation and tutorials available on the internet
+ButterKnife
+
+We use this library for injecting views into your Android Components. It is a lightweight library, and it uses annotation processing.
+It can save you from using findViewById(). And it will do the findViewById() thing for you automatically.
